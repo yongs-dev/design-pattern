@@ -22,8 +22,8 @@ import static com.mark.designpattern.b_strategy.Strategy.ConcreteStrategyB;
  * 2. 각각의 알고리즘을 캡슐화하여 -> 인터페이스로 추상화<br>
  * 3. 이들을 상호 교환이 가능하도록 만든다. -> 합성(Composition)으로 구성<br>
  * 4. 알고리즘을 사용하는 클라이언트와 상관없이 독립적으로 -> Context 수정 없이<br>
- * 5. 알고리즘을 다양하게 변경할 수 있게 한다. -> 메서드를 통해 전략 객체를 실시간으로 변경함으로써 전략을 변경<br>
- * <br><br>
+ * 5. 알고리즘을 다양하게 변경할 수 있게 한다. -> 메서드를 통해 전략 객체를 실시간으로 변경함으로써 전략을 변경
+ * <br><br><hr><br>
  * Strategy VS Template Method<br>
  * 패턴 유사점<br>
  * 1. 알고리즘을 때에 따라 적용한다는 컨셉<br>
@@ -95,7 +95,7 @@ public class StrategyTest {
         numbers.add(5);
 
         /**
-         * Sort 메서드의 매개변수로 익명 클래스 Comparator 객체를 인스턴스화하여<br>
+         * Sort 메서드의 매개변수로 익명 클래스 Comparator 객체를 인스턴스화하여
          * 그 안의 compare 메서드 동작 로직(ConcreteStrategy) 직접 구현/할당
          */
         Collections.sort(numbers, new Comparator<Integer>() {
