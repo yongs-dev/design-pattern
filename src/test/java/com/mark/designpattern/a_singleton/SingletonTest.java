@@ -1,9 +1,7 @@
 package com.mark.designpattern.a_singleton;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.context.annotation.Lazy;
 
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,18 +12,17 @@ import static org.assertj.core.api.Assertions.assertThat;
  * 리소스를 많이 차지하는 역할을 하는 무거운 클래스일 때 적용하기 적합하다.
  * 대표적으로 데이터베이스 연결 모듈을 들 수 있는데 I/O 바운드 그 자체로 무거운 작업에 속하며 한 번만 객체를 생성하고 돌려쓰면 되기 때문
  * 이 밖에도 디스크 연결, 네트워크 통신, DBCP 커넥션 풀, 스레드 풀, 캐시, 로그 기록 객체 등에 이용된다.
+ * <br><br>
+ * 싱글톤 패턴 구현 기법<br>
+ * 1. Eager Initialization<br>
+ * 2. Static block initialization<br>
+ * 3. Lazy initialization<br>
+ * 4. Thread safe initialization<br>
+ * 5. Double-Checked Locking<br>
+ * 6. ***Bill Pugh Solution<br>
+ * 7. ***Enum 이용
  */
 public class SingletonTest {
-    /**
-     * 싱글톤 패턴 구현 기법
-     * 1. Eager Initialization
-     * 2. Static block initialization
-     * 3. Lazy initialization
-     * 4. Thread safe initialization
-     * 5. Double-Checked Locking
-     * ***6. Bill Pugh Solution
-     * ***7. Enum 이용
-     */
 
     /**
      * 한 번만 미리 만들어두는 가장 직관적이고 심플한 기법
